@@ -46,7 +46,7 @@ void main()
 				cout << "Ingrese la altura: " ;
 				cin >> b;
 				r=(a*b)/2;
-				cout<<"El area del triangulo es"<<r<<endl;
+				cout<<"El area del triangulo es: "<<r<<endl;
 			 break;
 		case 0:
 			cout << "Salir";break;
