@@ -1,0 +1,58 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+#include <math.h>
+using namespace std;
+
+void main()
+{
+   int a, b, r, opcion,precio;
+   string licencia,conducir;
+   float iva;
+   do {
+     cout << endl;
+     cout << "1.- Calcular el IVA" << endl;
+     cout << "2.- Conducir" << endl;
+     cout << "3.- Area de un triangulo" << endl;
+     cout << "0.- Salir" << endl;
+     cout << "Elige una opción: " ;
+     cin >> opcion;
+     switch (opcion) 
+	 {
+	    case 1: 
+			cout<<"Ingrese el precio del producto: "<<endl;
+			cin>>precio;
+			iva=0.13;
+			cout<<"El IVA del producto es: "<<precio*iva<<endl;
+			break;
+	    case 2:
+			cout << "Sabe conducir?"<<endl;
+			cin >> conducir;
+			cout << "Tiene licencia?"<<endl;
+			cin >> licencia;
+			if((conducir == "si")&&(licencia == "si"))
+				{
+					cout<<"SI puede conducir"<<endl;
+				}
+			else
+				{
+					cout<<"NO puede conducir"<<endl;
+				}
+			break;
+	    case 3: 
+				cout << "Ingrese la base: " ;
+				cin >> a;
+				cout << "Ingrese la altura: " ;
+				cin >> b;
+				r=(a*b)/2;
+				cout<<"El area del triangulo es"<<r<<endl;
+			 break;
+		case 0:
+			cout << "Salir";break;
+	    default:
+			cout << "Opcion invalida" << endl;
+     }
+   } while (opcion != 0);
+   getch();
+}
