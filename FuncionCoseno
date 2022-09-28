@@ -1,0 +1,24 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+//Declarar el prototipo
+float funcoseno (float x);
+
+void main ()
+{
+	float X;
+	cout<<"Ingrese el valor: ";
+	cin>>X;
+	cout<<"El resultado de la funcion es: "<< funcoseno(X);
+	getch();
+}
+
+//Declarar la funcion
+float funcoseno (float x)
+{
+	float aux;
+	aux=3*cos(x) - 1;
+	return aux;
+}
