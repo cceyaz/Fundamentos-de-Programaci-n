@@ -1,0 +1,41 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+//Declarar el prototipo
+bool base8 (int n);
+
+void main ()
+{
+	int N;
+	cout<<"Ingrese el valor: ";
+	cin>>N;
+	if (base8(N)==true)
+	{
+		cout<<"No es en base 8";
+	}
+	else
+	{
+		cout<<"Esta en base 8";
+	}
+	getch();
+}
+
+//Declarar la funcion
+bool base8 (int n)
+{
+	int digito;
+	bool bandera=false;
+	 while(n>0)
+    {
+        digito=n%10;
+		n=n/10;
+		if((digito<0)||(digito>=8))
+        {
+			bandera=true;
+			break;
+        }
+	 }
+	return bandera;
+}
