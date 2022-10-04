@@ -1,0 +1,27 @@
+#include <iostream>
+#include "conio.h"
+using namespace std;
+//PROTOTIPO DE LA FUNCION
+float exponente (int base, int exponente); // la funcion es "exponente"
+
+int main() 
+{
+	int b, e, resultado;
+	cout<<"Ingrese la base: "<<endl;
+	cin>>b;
+	cout<<"Ingrese el exponente: "<<endl;
+	cin>>e;	
+	resultado = exponente(b,e);
+	cout<<"El resultado es: "<<resultado<<endl;
+	return 0;
+}
+float exponente (int base, int exponente)
+{
+	float aux;
+	aux = 1;
+	for (int i=1; i<=exponente;i++)
+	{
+		aux=aux*base;
+	}
+	return aux;	
+}
