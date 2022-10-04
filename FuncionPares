@@ -1,0 +1,32 @@
+#include <iostream>
+#include "conio.h"
+using namespace std;
+//PROTOTIPO DE LA FUNCION
+bool pares (int n); // la funcion es "pares"
+
+int main() 
+{
+	int z; // Nro. de pares
+	int k = 0; // Nro. en serie de 1 para contar pares
+	int i = 2; // serie
+	cout<<"Ingrese la cantidad de numeros: "<<endl;
+	cin>>z;	
+	while (k<z)
+	{
+		if(pares (i)== true)
+		{
+			cout<<i<<",";
+			k++;
+		}
+		i++;
+	}
+	return 0;
+}
+bool pares (int n)
+{
+	bool aux;
+	aux = false;
+	if(n%2 == 0)
+		aux = true;
+	return aux;
+}
