@@ -1,0 +1,40 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+bool primo (int numero);
+int main() 
+{
+   int N; 
+   int i; // i es quien da los numeros consecutivos: 1,2,3,4
+   int k; // k es quien va acumulando los numeros primos que se estan encontrando
+   cout<<"Ingrese cuantos numeros primos quiere mostrar: ";
+   cin>>N;
+   cout<<"Los "<<N<<" numeros primos son: "<<endl;
+   k = 0; //
+   i = 2;
+   while (k<N)
+   {
+	   if(primo(i)==true)
+	   {
+		   cout<<i<<",";
+		   k++;
+	   }
+	   i++;
+   }
+   getch ();
+}
+bool primo (int numero)
+{
+	int aux; //aux es la variante que tiene el resultado que se va mostrar
+	aux = true;
+	for (int i = 2; i<=numero-1;i++) 
+	{
+		if (numero%i == 0)
+		{
+			aux = false;
+			break;
+		}
+	}
+	return aux; 
+}
