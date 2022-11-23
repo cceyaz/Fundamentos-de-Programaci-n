@@ -1,0 +1,47 @@
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+
+#define MAX 20
+
+using namespace std;
+void cargarmat (int MAT[MAX][MAX], int m, int n);
+void mostrarmat (int MAT[MAX][MAX], int m, int n);
+int main()
+{
+    int matriz[MAX][MAX],fil,col;
+    cout<<"Ingrese el numero de filas: "<<endl;
+    cin>>fil;
+    cout<<"Ingrese el numero de columnas: "<<endl;
+    cin>>col;
+    cout<<"--------------------"<<endl;
+    cout<<"Ingrese los valores"<<endl;
+    cout<<"--------------------"<<endl;
+    cargarmat(matriz,fil,col);
+    cout<<"--------------------"<<endl;
+    cout<<"Mostrando Matriz"<<endl;
+    cout<<"--------------------"<<endl;
+    mostrarmat(matriz,fil,col);
+    return 0;   
+}
+void mostrarmat (int MAT[MAX][MAX], int m, int n)
+{
+    for(int i=0;i<m;i++)
+	{
+		for(int j=0;j<n;j++)
+		{
+	        cout<<MAT[i][j]<<"\t";
+		}
+		cout<<endl;
+	}
+
+}
+void cargarmat (int MAT[MAX][MAX], int m, int n)
+{
+	for(int i=0;i<m;i++)
+		for(int j=0;j<n;j++)
+		{
+			cout<<"MAT["<<i<<"]["<<j<<"]= ";
+	        cin>>MAT[i][j];
+		}
+}
