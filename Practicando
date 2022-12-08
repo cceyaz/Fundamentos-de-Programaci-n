@@ -1,0 +1,47 @@
+//Mediante funciones, realizar un programa que pida una cantidad de numeros y muestre el valor máximo y mínimo de los vectores.
+#include <iostream>
+#define MAX 10
+
+using namespace std;
+void cargarnumero(float numero[], int tamano);
+void mostrarvector(float numero[], int tamano);
+
+int main()
+{
+    float numeros[MAX];
+    int t;
+    cout<<"Ingrese la cantidad de numeros: "<<endl;
+    cin>>t;
+    cargarnumero(numeros,t);
+    mostrarvector(numeros, t);
+    return 0;
+}
+void cargarnumero(float numero[], int tamano)
+{
+    for(int i=0; i<tamano; i++)
+    {
+        cout<<i+1<<". Digite un valor: "<<endl;
+        cin>>numero[i];
+    }
+}
+void mostrarvector(float numero[], int tamano)
+{
+    float mayor=0, menor;
+    for(int i=0; i<tamano; i++)
+    {
+        if(numero[i]>mayor)
+        {
+            mayor=numero[i];
+        }
+    }
+    menor=mayor;
+    for(int i=0; i<tamano; i++)
+    {
+        if(menor>numero[i])
+        {
+            menor=numero[i];
+        }
+    }
+    cout<<"El valor máximo es: "<<mayor<<endl;
+    cout<<"El valor minimo es: "<<menor<<endl;
+}
